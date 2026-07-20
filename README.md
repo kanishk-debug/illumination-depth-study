@@ -59,7 +59,7 @@ on surfaces that had no meaningful illumination signal left to enhance.
 - Hyperparameter sensitivity check (gain/clipLimit) across both a winning and
   a losing TUM sequence, to test robustness of both results.
 
-  ## Practical scope of this method
+## Practical scope of this method
 
 The four TUM sequences represent global extremes — a whole scene that is
 uniformly texture/structure-rich or uniformly starved. Most real-world scenes
