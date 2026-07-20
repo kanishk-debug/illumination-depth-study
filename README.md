@@ -59,6 +59,23 @@ on surfaces that had no meaningful illumination signal left to enhance.
 - Hyperparameter sensitivity check (gain/clipLimit) across both a winning and
   a losing TUM sequence, to test robustness of both results.
 
+  ## Practical scope of this method
+
+The four TUM sequences represent global extremes — a whole scene that is
+uniformly texture/structure-rich or uniformly starved. Most real-world scenes
+are not globally uniform; they mix texture-rich and texture-starved regions
+within a single frame (e.g. a patterned floor under a blank ceiling, or a
+snowy trail with scattered rocks and footprints against open snow). Applying
+this method as a blanket, whole-image preprocessing step is therefore not
+recommended for general scenes — the results above show it can actively hurt
+accuracy on already information-rich content. The method's demonstrated use
+case is texture/structure-starved scenes or regions specifically (blank
+walls, fog, snow, low-detail industrial surfaces), not general-purpose
+preprocessing. A natural extension, motivated directly by this limitation and
+by the failed global adaptive-gain attempt above, is per-region rather than
+per-image adaptive gain — applying enhancement only to locally texture-starved
+patches within a mixed scene, left unexplored here.
+
 ## Positioning relative to prior work
 
 Related, but methodologically distinct: RADepthNet and DeLightMono use
