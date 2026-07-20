@@ -9,6 +9,8 @@ illumination and reflectance layers (bilateral filtering), then applying CLAHE
 selectively to the illumination layer only, improves frozen monocular depth
 estimation (DPT_Large) — and, critically, *when* it helps versus when it doesn't.
 
+Full results: [`master_results.csv`](./master_results.csv)
+
 ## Setup
 
 - **Backbone:** DPT_Large, frozen, no training/fine-tuning
